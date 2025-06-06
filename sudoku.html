@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="sudoku.css">
+</head>
+<body>
+    <div class="container">
+        <div class="theme-toggle">
+            <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="m12 2 0 2"></path>
+                <path d="m12 20 0 2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path>
+                <path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="m2 12 2 0"></path>
+                <path d="m20 12 2 0"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path>
+                <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider"></span>
+            </label>
+            <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+        </div>
+
+        <div class="content">
+            <div class="header">
+                <h1>Sudoku Engine</h1>
+                <p>Your Personal Sudoku Solver</p>
+            </div>
+
+            <div class="sudoku-container">
+                <div class="sudoku-grid" id="sudokuGrid">
+                   
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="solveBtn" class="btn btn-primary">Solve Puzzle</button>
+                <button id="clearBtn" class="btn btn-outline">Clear Grid</button>
+            </div>
+
+            <div class="instructions">
+                <p>Enter numbers 1-9 in the grid. </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="sudoku.js"></script>
+</body>
+</html>
